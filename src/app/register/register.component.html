@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Inscription</h2>  
+  
+    <form [formGroup]="form" #AdminInformation (ngSubmit)="AdminForm(AdminInformation)">  
+      
+      <div class="row">  
+        <div class=" col-md-offset-1 col-md-4">  
+            <label for="name"> Nom </label>  
+            <input formControlName="name" class="form-control" type="text">   
+        </div>  
+      </div>  
+      
+      <div class="row">  
+        <div class=" col-md-offset-1 col-md-4">  
+            <label for="description"> Description </label>  
+            <input formControlName="description" class="form-control" type="text">   
+        </div>  
+      </div>  
+    
+      <div class="row">  
+        <div class=" col-md-offset-1 col-md-4">  
+            <label for="currentPrice"> Prix </label>  
+            <input formControlName="currentPrice" class="form-control" type="number">   
+        </div>  
+      </div> 
+      
+        
+      <div class="row">  
+        <div class=" col-md-offset-1 col-md-4">  
+              
+          <label for="profileImage">Upload Image</label>  
+            <input formControlName="profileImage" class="form-control" type="file" (change)="selectFile($event)">   
+        </div>  
+      </div>  
+      
+      <div class="row" style="margin-top: 40px;">  
+        <div class="col-md-offset-1 col-md-4">  
+            <button class="btn btn-md btn-primary btn-style"  >Save</button>  
+        </div>  
+      </div>  
+      
+    </form>  
+</div>
